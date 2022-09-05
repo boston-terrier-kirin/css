@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Positioning</title>
+    <style>
+      body {
+        height: 4000px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        color: #fff;
+      }
+
+      .container {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background-color: #333;
+      }
+
+      /* relativeだけだと、元の位置からの移動になる */
+      #box-1 {
+        background-color: red;
+        position: relative;
+        top: 20px;
+        left: 550px;
+      }
+
+      /* absoluteだと、親要素からの移動になる */
+      #box-2 {
+        background-color: yellow;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+      #box-3 {
+        background-color: green;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+      }
+
+      /* fixedはviewportからの移動になる。スクロールしても常に同じ位置にいる */
+      #box-4 {
+        background-color: blue;
+        position: fixed;
+        left: 200px;
+      }
+
+      /* stickyはスクロールして一番上までいったらその場所にいる */
+      #box-5 {
+        position: sticky;
+        top: 10px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-1" class="box">1</div>
+    <div class="container">
+      <div id="box-2" class="box">2</div>
+      <div id="box-3" class="box">3</div>
+    </div>
+    <div id="box-4" class="box">4</div>
+    <div id="box-5" class="box">5</div>
+  </body>
+</html>

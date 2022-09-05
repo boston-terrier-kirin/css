@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inline & Block Styling</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      li {
+        display: inline;
+      }
+
+      li a {
+        padding-right: 20px;
+      }
+
+      img {
+        margin: auto;
+        display: block;
+      }
+
+      .box {
+        /* inline-block だと、paddingもmarginもwidthも効く */
+        display: inline-block;
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 15px;
+        width: 32%;
+      }
+
+      span {
+        border: 1px solid #333;
+
+        /* inline だと、paddingは効くが上の要素にかぶってしまう */
+        padding: 50px;
+
+        /* 上下のmarginは効かない */
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        /* 左右のmarginは効く */
+        margin-left: 150px;
+
+        /* widthは効かない */
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">Technology</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">Fashion</a></li>
+    </ul>
+
+    <br /><br />
+
+    <img src="img/leaf.png" alt="image" />
+
+    <br /><br />
+
+    <div class="box">
+      <h3>Heading</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi
+        quaerat soluta, repellat temporibus magnam sed minima similique saepe
+        itaque.
+      </p>
+    </div>
+    <div class="box">
+      <h3>Heading</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi
+        quaerat soluta, repellat temporibus magnam sed minima similique saepe
+        itaque.
+      </p>
+    </div>
+    <div class="box">
+      <h3>Heading</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi
+        quaerat soluta, repellat temporibus magnam sed minima similique saepe
+        itaque.
+      </p>
+    </div>
+
+    <span>TEST1</span>
+    <div>TEST2</div>
+  </body>
+</html>
