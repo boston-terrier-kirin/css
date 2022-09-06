@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Box Shadows</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        width: 200px;
+        padding: 1rem;
+        margin: 1rem;
+        background: coral;
+        color: #fff;
+      }
+
+      .box-1 {
+        /* offset-x | offset-y | color */
+        box-shadow: 10px 10px teal;
+      }
+
+      .box-2 {
+        /* offset-x | offset-y | blur-radius | color */
+        box-shadow: 5px 5px 20px teal;
+      }
+
+      .box-3 {
+        /* Negative values */
+        box-shadow: -5px -5px 20px teal;
+      }
+
+      .box-4 {
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3);
+      }
+
+      .box-5 {
+        /* inset | offset-x | offset-y | color */
+        box-shadow: inset -3px -3px teal;
+      }
+
+      .box-6 {
+        /* Multiple shadows */
+        box-shadow: 3px 3px teal, -3px -3px olive;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-1">
+        <h3>Box 1</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, vel.
+        </p>
+      </div>
+      <div class="box box-2">
+        <h3>Box 2</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, vel.
+        </p>
+      </div>
+      <div class="box box-3">
+        <h3>Box 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, vel.
+        </p>
+      </div>
+      <div class="box box-4">
+        <h3>Box 4</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, vel.
+        </p>
+      </div>
+      <div class="box box-5">
+        <h3>Box 5</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, vel.
+        </p>
+      </div>
+      <div class="box box-6">
+        <h3>Box 6</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, vel.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
