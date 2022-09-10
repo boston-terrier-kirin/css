@@ -1,0 +1,118 @@
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+
+  min-height: 50rem;
+}
+
+.header {
+  height: 7rem;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-grey-light-2);
+
+  /* ロゴとnavのflex。ロゴがあるのでalign-items:center にする。 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 3.25rem;
+  margin-left: 2rem;
+}
+
+.user-nav {
+  /* ロゴは中央寄せにしたいので、header は align-items: center にして、自分自身はsterchで縦方向に広げる。 */
+  align-self: stretch;
+
+  /* user-navの中のflex。hover向けにstretchさせる */
+  /* user-navもstrech。icon-boxもstrech */
+  display: flex;
+  align-items: stretch;
+}
+
+.user-nav__icon-box {
+  padding: 0 3rem;
+  cursor: pointer;
+
+  /* icon-boxの中のflex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 〇をabsoluteできるように、relative */
+  position: relative;
+}
+
+.user-nav__icon-box:hover {
+  background-color: var(--color-grey-light-2);
+}
+
+.user-nav__icon {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--color-grey-dark-3);
+}
+
+.user-nav__notification {
+  font-size: 0.8rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #fff;
+
+  /* 〇の中のflex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* user-nav__icon-box からのposition */
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
