@@ -1,0 +1,27 @@
+@import '../bootstrap-5.0.2/scss/bootstrap.scss';
+
+// grayはcolors-mapがあるので、これでbg-gray-100～900が作れる。
+@each $color, $value in $grays {
+  .bg-gray-#{$color} {
+    background-color: $value;
+  }
+}
+
+// bluesはcolors-mapがないので、colors-mapを作るところからやる。
+$blues: (
+  '100': $blue-100,
+  '200': $blue-200,
+  '300': $blue-300,
+  '400': $blue-400,
+  '500': $blue-500,
+  '600': $blue-600,
+  '700': $blue-700,
+  '800': $blue-800,
+  '900': $blue-900,
+) !default;
+
+@each $color, $value in $blues {
+  .bg-blue-#{$color} {
+    background-color: $value;
+  }
+}

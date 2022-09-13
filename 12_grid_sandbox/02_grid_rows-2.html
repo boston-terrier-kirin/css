@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid Rows</title>
+    <style>
+      .grid-1 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 4fr 1fr 4fr;
+        grid-template-rows: auto-fit auto-fit;
+      }
+
+      .item {
+        padding: 1rem;
+        background: #f4f4f4;
+        border: #ccc 1px solid;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+
+      .divide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-1">
+      <div class="item">Group#1</div>
+      <div></div>
+      <div class="item">Group#2</div>
+      <div class="item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere qui,
+        vero porro vel deserunt facilis assumenda veniam totam illo optio.
+      </div>
+      <div class="item divide">⇔</div>
+      <div class="item">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
+        quisquam temporibus sapiente suscipit? Unde pariatur, dolores
+        dignissimos non quisquam quia itaque repellendus et. Neque consequatur
+        laudantium saepe molestiae, tempora porro sequi nesciunt dicta eos
+        asperiores necessitatibus commodi beatae eum officia mollitia nostrum
+      </div>
+    </div>
+  </body>
+</html>
