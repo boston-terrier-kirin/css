@@ -11,7 +11,7 @@
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: 1px solid var(--color-gray-light-2);
+  border-bottom: var(--line);
 
   display: flex;
   justify-content: space-between;
@@ -35,6 +35,30 @@
 
 .hotel-view {
   background-color: #fff;
+
+  // grow shrink basis の順番
+  flex: 1;
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-gray-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-right: 4.5rem;
+
+  // grow shrink basis の順番
+  flex: 0 0 60%;
+}
+
+.user-reviews {
+  background-color: royalblue;
 
   // grow shrink basis の順番
   flex: 1;
