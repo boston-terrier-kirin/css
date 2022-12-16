@@ -183,3 +183,49 @@
   text-align: center;
   padding: 2.5rem;
 }
+
+// GALLERY
+.gallery {
+  display: flex;
+
+  &__photo {
+    // POINT：親のgallery__itemがflex-itemになっていて、幅が既に決まっているので、imgはwidth:100%にすればOK。
+    width: 100%;
+    display: block;
+  }
+}
+
+// OVERVIEW
+.overview {
+  display: flex;
+  align-items: center;
+
+  &__heading {
+  }
+
+  &__stars {
+    margin-right: auto;
+
+    // POINT：hoverすることを考慮すると、stars自体をflex:1で大きくするのは厳しい。代わりにmargin-right:autoを使う。
+    // background-color: orangered;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+  }
+
+  &_rating {
+  }
+
+  &__rating-average {
+  }
+
+  &__rating-count {
+  }
+}
