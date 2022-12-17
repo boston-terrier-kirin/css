@@ -25,6 +25,7 @@
 .sidebar {
   background-color: var(--color-gray-dark-1);
 
+  // POINT：flexで幅を指定する。
   // grow shrink basis の順番
   flex: 0 0 18%;
 
@@ -53,13 +54,18 @@
   padding: 3rem;
   margin-right: 4.5rem;
 
+  // POINT：flexで幅を指定する。
   // grow shrink basis の順番
   flex: 0 0 60%;
 }
 
 .user-reviews {
-  background-color: royalblue;
+  font-size: 1.4rem;
 
   // grow shrink basis の順番
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
