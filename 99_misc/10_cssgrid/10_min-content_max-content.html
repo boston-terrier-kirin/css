@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1200px;
+        margin: 30px auto;
+        background-color: #ddd;
+
+        /* min-content / max-content はコンテンツに応じた大きさにしてくれる。 */
+        display: grid;
+        grid-template-rows: max-content max-content;
+        grid-template-columns: max-content 1fr 1fr min-content;
+        gap: 20px;
+      }
+
+      .item {
+        padding: 10px;
+        color: #fff;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+
+      .item--1 {
+        background-color: yellowgreen;
+      }
+      .item--2 {
+        background-color: blueviolet;
+      }
+      .item--3 {
+        background-color: palevioletred;
+      }
+      .item--4 {
+        background-color: royalblue;
+      }
+      .item--5 {
+        background-color: goldenrod;
+      }
+      .item--6 {
+        background-color: orangered;
+      }
+      .item--7 {
+        background-color: chocolate;
+      }
+      .item--8 {
+        background-color: darkolivegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item--1">Modern very modern</div>
+      <div class="item item--2">CSS</div>
+      <div class="item item--3">WITH</div>
+      <div class="item item--4">Flexbox</div>
+      <div class="item item--5">and</div>
+      <div class="item item--6">Grid</div>
+      <div class="item item--7">is</div>
+      <div class="item item--8">
+        Great and amazing and just awesome to work with
+      </div>
+    </div>
+  </body>
+</html>

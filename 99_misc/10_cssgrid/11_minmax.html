@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 90%;
+        margin: 30px auto;
+        background-color: #ddd;
+
+        display: grid;
+        grid-template-rows: repeat(2, 100px);
+        gap: 20px;
+
+        /* 1つ目のカラムは、少なくとも100px, 大きくなっとしても200pxまで */
+        /* サイドバーとかで、大きくなりすぎるのが嫌な場合に使える */
+        grid-template-columns: minmax(100px, 200px) repeat(3, 1fr);
+      }
+
+      .item {
+        padding: 10px;
+        color: #fff;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+
+      .item--1 {
+        background-color: yellowgreen;
+      }
+      .item--2 {
+        background-color: blueviolet;
+      }
+      .item--3 {
+        background-color: palevioletred;
+      }
+      .item--4 {
+        background-color: royalblue;
+      }
+      .item--5 {
+        background-color: goldenrod;
+      }
+      .item--6 {
+        background-color: orangered;
+      }
+      .item--7 {
+        background-color: chocolate;
+      }
+      .item--8 {
+        background-color: darkolivegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item--1">Modern</div>
+      <div class="item item--2">CSS</div>
+      <div class="item item--3">WITH</div>
+      <div class="item item--4">Flexbox</div>
+      <div class="item item--5">and</div>
+      <div class="item item--6">Grid</div>
+      <div class="item item--7">is</div>
+      <div class="item item--8">Great</div>
+    </div>
+  </body>
+</html>
