@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #eee;
+      width: 1200px;
+      height: 100vh;
+      margin: 0 auto;
+
+      display: grid;
+
+      /* containerが高さを持っていれば、1frで縦方向が埋まる */
+      grid-template-rows: 0.25fr 1fr 1fr 0.25fr;
+      grid-template-columns: 0.5fr 1fr 0.5fr;
+
+      row-gap: 30px;
+      column-gap: 30px;
+    }
+
+    .item {
+      padding: 20px;
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .item--1 {
+      background-color: orange;
+
+      /*
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      */
+
+      /* short hand */
+      grid-row: 1 / 2;
+      /* grid-column: 1 / 4; */
+
+      /* span 3 でもOK */
+      /* grid-column: 1 / span 3; */
+
+      /* -1 でもOK */
+      grid-column: 1 / -1;
+    }
+    .item--2 {
+      background-color: green;
+      grid-row: 2 / 4;
+      grid-column: 1 / 2;
+    }
+    .item--3 {
+      background-color: violet;
+      grid-row: 2 / 4;
+      grid-column: 2 / 3;
+    }
+    .item--4 {
+      background-color: pink;
+      grid-row: 2 / 3;
+      grid-column: 3 / 4;
+    }
+    .item--5 {
+      background-color: blue;
+      grid-row: 3 / 4;
+      grid-column: 3 / 4;
+    }
+    .item--6 {
+      background-color: brown;
+      grid-row: 4 / 5;
+      grid-column: 1 / -1;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item item--1">1: Orange</div>
+      <div class="item item--2">2: Green</div>
+      <div class="item item--3">3: Violet</div>
+      <div class="item item--4">4: Pink</div>
+      <div class="item item--5">5: Blue</div>
+      <div class="item item--6">6: Brown</div>
+    </div>
+  </body>
+</html>
