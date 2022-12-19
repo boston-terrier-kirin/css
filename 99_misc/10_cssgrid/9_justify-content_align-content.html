@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1200px;
+        height: 1000px;
+        margin: 30px auto;
+        background-color: #ddd;
+
+        display: grid;
+        grid-template-rows: repeat(6, 100px);
+        grid-template-columns: repeat(2, 150px);
+        gap: 20px;
+
+        /* justify-contentは、conteinerの中でのjustifyになる。 */
+        /* track自体をalignしている。 */
+        justify-content: space-between;
+
+        /* align-items ではなく、align-content */
+        align-content: center;
+      }
+
+      .item {
+        padding: 10px;
+        color: #fff;
+        font-size: 20px;
+        font-family: sans-serif;
+        background-color: orangered;
+      }
+
+      .item--2 {
+        /* align-selfは縦方向 */
+        align-self: start;
+      }
+
+      .item--3 {
+        /* justify-selfは横方向 */
+        justify-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item--1">Modern</div>
+      <div class="item item--2">CSS</div>
+      <div class="item item--3">WITH</div>
+      <div class="item item--4">Flexbox</div>
+      <div class="item item--5">and</div>
+      <div class="item item--6">Grid</div>
+      <div class="item item--7">is</div>
+      <div class="item item--8">Great</div>
+      <div class="item item--9">Also</div>
+      <div class="item item--10">Transition</div>
+      <div class="item item--11">is</div>
+      <div class="item item--12">Great</div>
+    </div>
+  </body>
+</html>
