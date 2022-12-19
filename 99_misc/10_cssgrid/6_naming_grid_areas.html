@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #eee;
+      width: 1200px;
+      height: 100vh;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-rows: 0.25fr 1fr 3fr 0.25fr;
+      grid-template-columns: repeat(4, 1fr);
+
+      /* 空きスペースを作りたい場合、. にする */
+      grid-template-areas:
+        'header header header .'
+        'box-1 box-2 box-3 sidebar'
+        'main main main sidebar'
+        'footer footer footer footer';
+
+      row-gap: 30px;
+      column-gap: 30px;
+    }
+
+    .item {
+      padding: 10px;
+      font-size: 18px;
+      color: #fff;
+      background-color: orangered;
+    }
+
+    .header {
+      grid-area: header;
+    }
+
+    .small-box-1 {
+      grid-area: box-1;
+    }
+
+    .small-box-2 {
+      grid-area: box-2;
+    }
+
+    .small-box-3 {
+      grid-area: box-3;
+    }
+
+    .main-content {
+      grid-area: main;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item header">Heder</div>
+      <div class="item small-box-1">Small box 1</div>
+      <div class="item small-box-2">Small box 2</div>
+      <div class="item small-box-3">Small box 3</div>
+      <div class="item main-content">Main</div>
+      <div class="item sidebar">Sidebar</div>
+      <div class="item footer">Footer</div>
+    </div>
+  </body>
+</html>
