@@ -1,17 +1,24 @@
 .story {
   &__pictures {
-    background-color: $color-primary;
     grid-column: full-start / col-end 4;
+
+    background-color: $color-primary;
     background-image: linear-gradient(
         rgba($color-primary, 0.5),
         rgba($color-primary, 0.5)
       ),
       url(../img/back.jpg);
+    background-size: cover;
 
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+      padding: 3rem;
+    }
   }
 
   &__img--1 {
@@ -20,6 +27,11 @@
 
     grid-row: 2 / 6;
     grid-column: 2 / 6;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / 4;
+      grid-row: 1 / -1;
+    }
   }
 
   &__img--2 {
@@ -29,6 +41,12 @@
 
     grid-row: 4 / 6;
     grid-column: 4 / 7;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 1 / -1;
+      width: 100%;
+      transform: translate(-8rem, 8rem);
+    }
   }
 
   &__content {
@@ -41,11 +59,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem 4rem;
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+    }
   }
 
   &__text {
     font-size: 1.5rem;
     font-style: italic;
     margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 1rem;
+    }
   }
 }
