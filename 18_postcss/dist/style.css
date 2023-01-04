@@ -1,0 +1,26 @@
+@custom-selector: --heading h1, h2;
+body {
+  background-color: #fafafa;
+}
+:--heading {
+  font-size: 40px;
+}
+input {
+  padding: 0.5rem 1rem;
+}
+input::-moz-placeholder {
+  color: red;
+}
+input::placeholder {
+  color: red;
+}
+.card {
+  background-image: url(/dist/img/logo.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 300px;
+}
+.card h2 {
+  color: blue;
+}
