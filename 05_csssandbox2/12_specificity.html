@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* INLINE-STYLE > ID > CLASS > ELEMENT */
+      /* https://specificity.keegan.st/ */
+
+      /* classは10点 */
+      .lorem {
+        color: green;
+      }
+
+      /* element1点×2 */
+      div p {
+        color: red;
+      }
+
+      /* element1点 */
+      p {
+        color: blue; /* !important; */
+        font-weight: bold; /* colorは負けるが、font-weightは適用される */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+        provident!
+      </p>
+    </div>
+  </body>
+</html>

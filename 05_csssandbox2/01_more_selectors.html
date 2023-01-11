@@ -8,7 +8,7 @@
     <style>
       /* 
         Descendant: space
-        Child: >
+        Direct Child: >
         Adjacent sibling: +
         General sibling: ~
       */
@@ -35,9 +35,21 @@
         color: #fff;
       }
 
+      /* https://developer.mozilla.org/ja/docs/Web/CSS/Attribute_selectors */
       /* 属性がある場合 */
       a[target] {
         background: #ddd;
+      }
+
+      /* *= は、含む */
+      a[href*='youtube'] {
+        background-color: antiquewhite;
+      }
+
+      /* $= は、で終わる */
+      a[href$='.io'] {
+        background-color: green;
+        color: #fff;
       }
 
       /* 属性値まで指定する場合 */
@@ -72,6 +84,8 @@
 
     <a href="#">Page 1</a> <a href="#">Page 2</a>
     <a href="http://google.com" target="_blank">Google</a>
+    <a href="https://www.youtube.com/?hl=ja" target="_blank">Youtube</a>
+    <a href="https://spring.io" target="_blank">Springframework</a>
 
     <br /><br />
 

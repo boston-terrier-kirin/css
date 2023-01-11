@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        /* inputとbuttonには継承されない。 */
+        color: #fff;
+        background-color: #333;
+        font-family: 'Montserrat', sans-serif;
+
+        /* paddingとかborderは継承されれない */
+        padding: 2rem;
+        border: 10px solid #fff;
+      }
+
+      /* これで継承される。 */
+      input,
+      button {
+        font-family: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <h2>Subheader</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus unde vitae
+      repellat quod consequatur omnis eligendi nesciunt iste mollitia labore!
+    </p>
+
+    <div>
+      <input type="text" value="test" />
+      <input type="text" placeholder="input enything" />
+      <button>Click!</button>
+    </div>
+  </body>
+</html>
