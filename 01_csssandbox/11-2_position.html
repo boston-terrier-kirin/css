@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSS Positioning</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
       body {
-        height: 4000px;
+        height: 100vh;
       }
 
       .box {
@@ -19,55 +24,52 @@
       .container {
         position: relative;
         width: 500px;
-        height: 500px;
+        height: 250px;
         background-color: #333;
       }
 
-      /* relativeだけだと、元の位置からの移動になる */
+      /* top: calc(100% + 5px)で親のちょっと下になる */
       #box-1 {
         background-color: red;
-        position: relative;
-        top: 20px;
-        left: 550px;
+        position: absolute;
+        top: calc(100% + 5px);
       }
 
-      /* absoluteだと、親要素からの移動になる */
+      /* left: 100%で親のちょうど右になる */
       #box-2 {
         background-color: yellow;
         color: #000;
         position: absolute;
-        top: 0px;
-        right: 0px;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
       }
+
+      /* transform: translateX(-50%)で真ん中寄せ */
       #box-3 {
+        background-color: blue;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* 親のちょうど真ん中 */
+      #box-4 {
         background-color: green;
         position: absolute;
-        bottom: 0px;
-        right: 0px;
-      }
-
-      /* fixedはviewportからの移動になる。スクロールしても常に同じ位置にいる */
-      #box-4 {
-        background-color: blue;
-        position: fixed;
-        left: 200px;
-      }
-
-      /* stickyはスクロールして一番上までいったらその場所にいる */
-      #box-5 {
-        position: sticky;
-        top: 10px;
-        background-color: orange;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     </style>
   </head>
   <body>
-    <div id="box-1" class="box">1</div>
     <div class="container">
+      <div id="box-1" class="box">1</div>
       <div id="box-2" class="box">2</div>
       <div id="box-3" class="box">3</div>
+      <div id="box-4" class="box">4</div>
     </div>
-    <div id="box-4" class="box">4</div>
-    <div id="box-5" class="box">5</div>
   </body>
 </html>
