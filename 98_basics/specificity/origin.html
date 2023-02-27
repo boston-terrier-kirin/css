@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity</title>
+    <style>
+      /*
+        CSS Cascade
+        1. Importance
+        2. Origin
+        3. Specificity
+        4. Position
+
+        Specificity
+        1. Inline Styles
+        2. ID Selectors
+        3. Class | Attribute | Pseudo-Class
+        4. Element | Pseudo-Element
+      */
+
+      /* (0,0,0) でも、originがuserなので、browserデフォルトのスタイルに勝てる */
+      * {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Specificity</h1>
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam
+        animi ipsa. Provident illo voluptates omnis optio autem beatae
+        excepturi.
+      </p>
+      <p class="featured special">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam
+        animi ipsa. Provident illo voluptates omnis optio autem beatae
+        excepturi.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam
+        animi ipsa. Provident illo voluptates omnis optio autem beatae
+        excepturi.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aperiam
+        animi ipsa. Provident illo voluptates omnis optio autem beatae
+        excepturi.
+      </p>
+    </div>
+  </body>
+</html>

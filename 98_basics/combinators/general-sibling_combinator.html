@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Combinators</title>
+    <style>
+      /* 
+        Descendant: space
+        Direct Child: >
+        Adjacent sibling: +
+        General sibling: ~
+      */
+
+      /* ul と p の親(div)が同じで、p が ul の後ろにある場合 */
+      ul ~ p {
+        background: #ff0000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>[1]Lorem ipsum dolor sit amet.</p>
+      <p>[1]Lorem ipsum dolor sit amet.</p>
+
+      <ul>
+        <li>Item 1</li>
+        <li><p>[2]Lorem ipsum dolor sit amet.</p></li>
+        <li>Item 3</li>
+      </ul>
+
+      <p>[3]Lorem ipsum dolor sit amet.</p>
+      <p>[3]Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p>[4]Lorem ipsum dolor sit amet.</p>
+    <p>[5]Lorem ipsum dolor sit amet.</p>
+  </body>
+</html>

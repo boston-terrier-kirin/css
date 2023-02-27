@@ -4,38 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>More Selectors</title>
+    <title>Selectors</title>
     <style>
-      /* 
-        Descendant: space
-        Direct Child: >
-        Adjacent sibling: +
-        General sibling: ~
-      */
-
-      /* p は div の直接の子供でなくてもOK */
-      div p {
-        background-color: aqua;
-      }
-
-      /* p が div の直接の子供 */
-      div > p {
-        background-color: #ddd;
-      }
-
-      /* p が div のすぐ後 */
-      div + p {
-        background: #333;
-        color: #fff;
-      }
-
-      /* ul と p の親が同じで、p が ul の後ろにある場合 */
-      ul ~ p {
-        background: #ff0000;
-        color: #fff;
-      }
-
       /* https://developer.mozilla.org/ja/docs/Web/CSS/Attribute_selectors */
+
       /* 属性がある場合 */
       a[target] {
         background: #ddd;
@@ -66,28 +38,11 @@
 
       /* 属性値まで指定する場合 */
       input[value='Submit'] {
-        width: 100%;
+        width: 50%;
       }
     </style>
   </head>
   <body>
-    <div>
-      <p>[1]Lorem ipsum dolor sit amet.</p>
-      <p>[1]Lorem ipsum dolor sit amet.</p>
-
-      <ul>
-        <li>Item 1</li>
-        <li><p>[2]Lorem ipsum dolor sit amet.</p></li>
-        <li>Item 3</li>
-      </ul>
-
-      <p>[3]Lorem ipsum dolor sit amet.</p>
-      <p>[3]Lorem ipsum dolor sit amet.</p>
-    </div>
-
-    <p>[4]Lorem ipsum dolor sit amet.</p>
-    <p>[5]Lorem ipsum dolor sit amet.</p>
-
     <a href="#">Page 1</a> <a href="#">Page 2</a>
     <a href="#home-page">Home</a>
     <a href="http://google.com" target="_blank">Google</a>

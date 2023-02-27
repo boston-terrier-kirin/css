@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* h2も含めた3番目になる。 */
+      .box1 p:nth-child(3) {
+        color: blue;
+      }
+
+      /* h2を含めずに3番目になる */
+      .box2 p:nth-of-type(3) {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <h2>Box1</h2>
+      <p>1番目</p>
+      <p>2番目 * ここ</p>
+      <p>3番目</p>
+    </div>
+
+    <div class="box2">
+      <h2>Box2</h2>
+      <p>1番目</p>
+      <p>2番目</p>
+      <p>3番目 * ここ</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Combinators</title>
+    <style>
+      /* 
+        Descendant: space
+        Direct Child: >
+        Adjacent sibling: +
+        General sibling: ~
+      */
+
+      /* p は div の直接の子供でなくてもOK */
+      div p {
+        background-color: aqua;
+      }
+
+      #cast span {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>[1]Lorem ipsum dolor sit amet.</p>
+      <p>[1]Lorem ipsum dolor sit amet.</p>
+
+      <ul>
+        <li>Item 1</li>
+        <li><p>[2]Lorem ipsum dolor sit amet.</p></li>
+        <li>Item 3</li>
+      </ul>
+
+      <p>[3]Lorem ipsum dolor sit amet.</p>
+      <p>[3]Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p>[4]Lorem ipsum dolor sit amet.</p>
+    <p>[5]Lorem ipsum dolor sit amet.</p>
+
+    <h2>Cast</h2>
+    <ul id="cast">
+      <li>F. Murray Abraham <span>Antonio Salieri</span></li>
+      <li>Tom Hulce <span>Wolfgang Amadeus Mozart</span></li>
+      <li>Elizabeth Berridge <span>Constanze Mozart</span></li>
+      <li>Roy Dotrice <span>Leopold Mozart</span></li>
+      <li>Simon Callow <span>Emanuel Schikaneder</span></li>
+      <li>Christine Ebersole <span>Katerina Cavalieri</span></li>
+      <li>Jeffrey Jones <span>Emperor Joseph II</span></li>
+    </ul>
+  </body>
+</html>
