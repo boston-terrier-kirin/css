@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: olive;
+        height: 200px;
+        width: 200px;
+
+        position: relative;
+      }
+
+      .box span {
+        color: #fff;
+        background-color: orangered;
+        padding: 1rem;
+        border-radius: 5rem;
+
+        /* 親のうち、一番最初のrelativeからの位置になる。 */
+        position: absolute;
+        top: 100%;
+        left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>absolute</h1>
+    <div class="box">
+      <span>Hi</span>
+    </div>
+  </body>
+</html>
