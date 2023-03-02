@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1200px;
+        margin: 30px auto;
+        background-color: #ddd;
+
+        /* 何行になるか不明いな場合、1行目だけを定義しておいて、残りはimplicit rowとして定義する。 */
+        display: grid;
+
+        /* 1行目の定義 */
+        grid-template-rows: 150px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        /* implicit gridへの定義 */
+        /* これがないと1行目だけ150pxで、後の行は高さが小さくなる。 */
+        /* grid-auto-rows: 100px を指定しているので、2行目からは100pxになる。 */
+        grid-auto-flow: row;
+        grid-auto-rows: 100px;
+
+        /* デフォルトはrowになっているが、columnに変えれば横に展開される */
+        /* grid-auto-flow: column; */
+        /* grid-auto-columns: 0.5fr; */
+      }
+
+      .item {
+        padding: 10px;
+        color: #fff;
+        font-size: 20px;
+        font-family: sans-serif;
+        background-color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item--1">Modern</div>
+      <div class="item item--2">CSS</div>
+
+      <!-- grid定義にないセルに関しては、implicit grid 扱いになる。 -->
+      <div class="item item--3">WITH</div>
+      <div class="item item--4">Flexbox</div>
+      <div class="item item--5">and</div>
+      <div class="item item--6">Grid</div>
+      <div class="item item--7">is</div>
+      <div class="item item--8">Great</div>
+    </div>
+  </body>
+</html>

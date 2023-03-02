@@ -18,6 +18,7 @@
 
       /* grid-template-columns: 150px 150px 150px; */
       /* %でも指定できるので、cardを横並べする時に便利。 */
+      /* ただし、この例では 1000px / 4 = 250px + gap 30px となっているので、Pinkが枠からはみ出している。 */
       grid-template-columns: repeat(4, 25%);
 
       row-gap: 30px;
@@ -25,6 +26,7 @@
     }
 
     .item {
+      box-sizing: border-box;
       padding: 20px;
       font-size: 30px;
       color: #fff;

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header,
+      footer {
+        background-color: bisque;
+        height: 100px;
+      }
+
+      article {
+        background-color: teal;
+        height: 300px;
+      }
+
+      aside {
+        background-color: burlywood;
+        height: 300px;
+      }
+
+      /* 
+        最初からflexで左右にして、小さくなったらcolumnに切り変えるのではなく、
+        1000pxを超えたら、flexにする。
+       */
+      @media (min-width: 1000px) {
+        main {
+          display: flex;
+        }
+
+        article {
+          flex: 1 1 70%;
+        }
+
+        aside {
+          flex: 1 1 30%;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        article {
+          flex: 1 1 80%;
+        }
+        aside {
+          flex: 1 1 20%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <main>
+      <article>article</article>
+      <aside>aside</aside>
+    </main>
+    <footer>footer</footer>
+  </body>
+</html>

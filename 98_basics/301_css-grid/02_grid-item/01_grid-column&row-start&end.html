@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        height: 600px;
+        width: 600px;
+        margin: 1rem;
+        background-color: black;
+        box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 0.5rem;
+      }
+
+      .box {
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        grid-column-start: 5;
+        grid-row-start: 4;
+      }
+
+      .item-2 {
+        grid-column-start: 3;
+        grid-row-start: 3;
+        grid-row-end: span 3;
+      }
+
+      /* shorthand */
+      .item-3 {
+        grid-column: 1 / 2;
+        grid-row: 4 / span 2;
+      }
+
+      .item-4 {
+        /* / を省略した場合、start になる */
+        grid-column: 5;
+        grid-row: 3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box item-1" style="background-color: #e53935">FIRST</div>
+      <div class="box item-2" style="background-color: #d81b60">SECOND</div>
+      <div class="box item-3" style="background-color: #8e24aa">THIRD</div>
+      <div class="box item-4" style="background-color: #5e35b1">FOURTH</div>
+      <div class="box" style="background-color: #3949ab">FIFTH</div>
+      <div class="box" style="background-color: #1e88e5">SIXTH</div>
+      <div class="box" style="background-color: #00acc1">SEVENTH</div>
+      <div class="box" style="background-color: #00897b">EIGHTH</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        height: 600px;
+        width: 600px;
+        margin: 1rem;
+        background-color: black;
+        box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+
+        display: grid;
+
+        /* grid-template-areasだけではpx指定ができないので、 grid-template-columns / grid-template-rows と組み合わせて使う */
+        grid-template-columns: 1fr 150px;
+        grid-template-rows: 100px 1fr 100px;
+
+        /* 空のトラックを作りたい場合、. にする。 */
+        grid-template-areas:
+          'navbar navbar'
+          'main side'
+          'footer .';
+      }
+
+      .box {
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        grid-area: navbar;
+      }
+      .item-2 {
+        grid-area: main;
+      }
+      .item-3 {
+        grid-area: side;
+      }
+      .item-4 {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box item-1" style="background-color: #e53935">FIRST</div>
+      <div class="box item-2" style="background-color: #d81b60">SECOND</div>
+      <div class="box item-3" style="background-color: #8e24aa">THIRD</div>
+      <div class="box item-4" style="background-color: #5e35b1">FOURTH</div>
+    </div>
+  </body>
+</html>

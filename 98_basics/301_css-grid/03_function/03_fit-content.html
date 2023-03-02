@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        height: 700px;
+        width: 80%;
+        margin: 200px auto;
+        background-color: black;
+        box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+
+        display: grid;
+
+        /* fit-content(300px) で、最大300px、それ以下の場合は、コンテンツに応じた幅になる。 */
+        grid-template-columns: fit-content(300px) fit-content(300px) fit-content(300px);
+
+      .box {
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box" style="background-color: #e53935">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+        assumenda non impedit voluptatibus recusandae rerum voluptas expedita
+        consectetur hic optio esse illum, nihil maiores maxime distinctio? Harum
+        praesentium labore excepturi! Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Maiores, excepturi?
+      </div>
+      <div class="box" style="background-color: #d81b60">
+        I am as wide as my content
+      </div>
+      <div class="box" style="background-color: #8e24aa">THIRD</div>
+    </div>
+  </body>
+</html>
